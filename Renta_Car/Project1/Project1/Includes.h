@@ -4,6 +4,7 @@
 #include<iomanip>
 #include <windows.h>   
 #include<memory>
+#include <stdlib.h>
 
 using namespace std;
 

@@ -77,6 +77,9 @@
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
     </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>OpenCV libs</AdditionalLibraryDirectories>
+    </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
@@ -115,11 +118,19 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Auto.cpp" />
+    <ClCompile Include="ClanskaKartica.cpp" />
+    <ClCompile Include="Datum.cpp" />
+    <ClCompile Include="Korisnik.cpp" />
     <ClCompile Include="Lista.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Auto.h" />
+    <ClInclude Include="ClanskaKartica.h" />
+    <ClInclude Include="Datum.h" />
     <ClInclude Include="Includes.h" />
+    <ClInclude Include="Korisnik.h" />
     <ClInclude Include="Lista.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
