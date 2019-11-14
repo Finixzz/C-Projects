@@ -4,6 +4,7 @@ void ClanskaKartica::kreirajKarticu()
 {
 	this->datumKreiranjaKartice.postaviDatum();
 	this->postojiKartica = true;
+	this->brojKartice = int(datumKreiranjaKartice.getDan() + datumKreiranjaKartice.getGodina() + datumKreiranjaKartice.getGodina());
 }
 
 bool ClanskaKartica::getStatusKartice()
@@ -15,3 +16,5 @@ Datum ClanskaKartica::getDatumKreiranjaKartice()
 {
 	return datumKreiranjaKartice;
 }
+
+int ClanskaKartica::getBrojKartice() { return this->brojKartice; }

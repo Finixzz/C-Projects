@@ -1,14 +1,9 @@
-﻿  main.cpp
-c:\users\450g6\source\repos\c-projects\renta_car\project1\project1\lista.h(142): warning C4101: 'oboji': unreferenced local variable
-  c:\users\450g6\source\repos\c-projects\renta_car\project1\project1\lista.h(141): note: while compiling class template member function 'T &Lista<T>::getClanSaIndexa(int &)'
+﻿  RentaCar.cpp
+c:\users\450g6\source\repos\c-projects\renta_car\project1\project1\lista.h(159): warning C4101: 'oboji': unreferenced local variable
+  c:\users\450g6\source\repos\c-projects\renta_car\project1\project1\lista.h(158): note: while compiling class template member function 'T &Lista<T>::getClanSaIndexa(int &)'
           with
           [
               T=Korisnik
           ]
-  c:\users\450g6\source\repos\c-projects\renta_car\project1\project1\main.cpp(13): note: see reference to function template instantiation 'T &Lista<T>::getClanSaIndexa(int &)' being compiled
-          with
-          [
-              T=Korisnik
-          ]
-  c:\users\450g6\source\repos\c-projects\renta_car\project1\project1\main.cpp(6): note: see reference to class template instantiation 'Lista<Korisnik>' being compiled
+  c:\users\450g6\source\repos\c-projects\renta_car\project1\project1\rentacar.h(9): note: see reference to class template instantiation 'Lista<Korisnik>' being compiled
   Project1.vcxproj -> C:\Users\450G6\source\repos\C-Projects\Renta_Car\Project1\Debug\Project1.exe

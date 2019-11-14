@@ -18,9 +18,6 @@
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Lista.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Datum.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -31,6 +28,12 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Auto.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Marka.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RentaCar.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -51,6 +54,15 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Auto.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="I_Lista.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Marka.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RentaCar.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

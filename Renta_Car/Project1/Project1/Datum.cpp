@@ -111,7 +111,6 @@ int Datum::getGodina()
 
 void Datum::postaviDatum()
 {
-	cout << "Unesite datum kreiranja clanske kartice: " << endl;
 	this->setGodina();
 	this->setMjesec();
 	this->setDan();

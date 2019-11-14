@@ -122,16 +122,20 @@
     <ClCompile Include="ClanskaKartica.cpp" />
     <ClCompile Include="Datum.cpp" />
     <ClCompile Include="Korisnik.cpp" />
-    <ClCompile Include="Lista.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Marka.cpp" />
+    <ClCompile Include="RentaCar.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Auto.h" />
     <ClInclude Include="ClanskaKartica.h" />
     <ClInclude Include="Datum.h" />
     <ClInclude Include="Includes.h" />
+    <ClInclude Include="I_Lista.h" />
     <ClInclude Include="Korisnik.h" />
     <ClInclude Include="Lista.h" />
+    <ClInclude Include="Marka.h" />
+    <ClInclude Include="RentaCar.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
