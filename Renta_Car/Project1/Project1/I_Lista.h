@@ -13,5 +13,6 @@ public:
 	virtual void obrisiSaIndexa(int &) = 0;
 	virtual int getDuzina() = 0;
 	virtual T &getClanSaIndexa(int &) = 0;
+	virtual T &getClan() = 0;
 };
 

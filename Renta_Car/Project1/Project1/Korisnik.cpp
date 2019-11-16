@@ -43,6 +43,16 @@ void Korisnik::setKorisnik()
 	}
 }
 
+void Korisnik::setLoyalitiBodovi(double Bodovi)
+{
+	this->loyalitiBodovi = this->loyalitiBodovi+Bodovi;
+}
+
+void Korisnik::dodajIznajmjenoAuto(Auto & a)
+{
+	this->jeIznajmio.dodaj(a);
+}
+
 string Korisnik::getImePrezime()
 {
 	return this->imePrezime;
@@ -61,4 +71,9 @@ Datum Korisnik::getDatumRodjenja()
 ClanskaKartica Korisnik::getKartica()
 {
 	return this->kartica;
+}
+
+double Korisnik::getLoyalitiBodivi()
+{
+	return this->loyalitiBodovi;
 }

@@ -32,10 +32,9 @@ public:
 	void obrisiSaIndexa(int &index)override;
 	int getDuzina() override;
 	T  &getClanSaIndexa(int &index)override;
+	T &getClan()override;
 
 };
-
-
 
 template<class T>
 void Lista<T>::dodaj(T &element) {
@@ -169,4 +168,9 @@ T &Lista<T>::getClanSaIndexa(int &index) {
 			tekuci = tekuci->sljedeci;
 		return tekuci->element;
 	}
+}
+
+template<class T>
+T &Lista<T>::getClan() {
+	return this->kraj->element;
 }

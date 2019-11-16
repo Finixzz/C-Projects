@@ -1,8 +1,4 @@
 #include "Auto.h"
-#include <iostream>
-#include <string>
-using std::cout;
-using std::cin;
 
 
 
@@ -14,6 +10,14 @@ void Auto::setMarka()
 void Auto::setBrojTakvihAuta() {
 	cout << "Unesite koliko takvih auta ima na stanju: ";
 	cin >> this->brojAuta;
+}
+void Auto::jeIznajmljeno()
+{
+	this->brojAuta--;
+}
+void Auto::jeVraceno()
+{
+	this->brojAuta++;
 }
 void Auto::setDatumRegistracije() {
 	boja oboji;
@@ -119,5 +123,5 @@ void Auto::printAutoInfo() {
 		this->datumRegistracije.ispisiDatum();
 		cout << " i ima ukupno " << this->getBrojBrzina() << " brzina, " <<
 		"na stanju trenutno dostupno " << this->getBrojAutaTogTipa() <<" takvih Auta"<< endl;
-		cout << "Cijena po danu: " << this->getCijenaPoDanu();
+		cout << "	Cijena po danu: " << this->getCijenaPoDanu(); cout<< " [KM]" << endl;
 }

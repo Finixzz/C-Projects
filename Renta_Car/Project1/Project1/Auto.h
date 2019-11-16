@@ -18,6 +18,8 @@ public:
 	~Auto() {};
 	void setMarka();
 	void setBrojTakvihAuta();
+	void jeIznajmljeno();
+	void jeVraceno();
 	void setDatumRegistracije();
 	void setTip();
 	void setGorivo();
