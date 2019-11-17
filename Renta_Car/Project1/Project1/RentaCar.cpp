@@ -37,7 +37,7 @@ void RentaCar::printAllKorisnikInfo(Korisnik *korisnik)
 
 void RentaCar::printKorisniciKojiSuIznajmiliAutomobil()
 {
-	int uslov_zadovoljen = 0;
+	int uslov_zadovoljen=0;
 	boja oboji;
 	oboji.setCrvena();
 	cout << "---------------------------------------------\n";
@@ -52,7 +52,7 @@ void RentaCar::printKorisniciKojiSuIznajmiliAutomobil()
 			uslov_zadovoljen++;
 		}
 	}
-	if (!uslov_zadovoljen)
+	if (uslov_zadovoljen == 0)
 		throw 0;
 	oboji.setCrvena();
 	cout << "---------------------------------------------\n";
@@ -81,20 +81,20 @@ void RentaCar::vratiIznamljeniAutomobil(Korisnik & korisnik)
 	boja oboji;
 	int index;
 	for (int i = 0; i < getSizeOfListaAuta(); i++) {
-		if (korisnik.getImeIznajmljenogAuta() == listaAuta.getClanSaIndexa(i).getMarka().getNaziv()) {
-			korisnik.vratiIznajmjenoAuto();
+		if (korisnik.getObjekatIznajmljenoAuto().getMarka().getNaziv() == listaAuta.getClanSaIndexa(i).getMarka().getNaziv()) {
 			listaAuta.getClanSaIndexa(i).jeVraceno();
 			index = i;
 		}
 	}
-	string izvjestaj = "Automobil marke " + listaAuta.getClanSaIndexa(index).getMarka().getNaziv() + " je vracen";
+	korisnik.vratiIznajmjenoAuto();
+	string izvjestaj = korisnik.getImePrezime()+" je vratio automobil marke " + listaAuta.getClanSaIndexa(index).getMarka().getNaziv();
 	this->dodajIzvjestaj(izvjestaj);
 	oboji.setCrvena();
-	cout << "----------------------------------------------\n";
+	cout << "---------------------------------------------------\n";
 	oboji.setDefault();
 	cout << izvjestaj << endl;
 	oboji.setCrvena();
-	cout << "----------------------------------------------\n";
+	cout << "---------------------------------------------------\n";
 
 }
 
@@ -193,7 +193,13 @@ int RentaCar::izvrsiRezervaciju(Korisnik &korisnik,int & izborAuta)
 	string izvjestaj;
 	izvjestaj = korisnik.getImePrezime() + " je iznajmio " + listaAuta.getClanSaIndexa(izborAuta).getMarka().getNaziv() + " na ukupno " + to_string(this->getBrojKoristenihDana()) + " dana";
 	double cijenaUsluge = this->listaAuta.getClanSaIndexa(izborAuta).getCijenaPoDanu()*this->brojDanaZaKoristenjeAuta;
+	oboji.setCrvena();
+	cout << "----------------------------\n";
+	oboji.setDefault();
 	cout << "Ukupno za platit: " << cijenaUsluge << " [KM]" << endl;
+	oboji.setCrvena();
+	cout << "----------------------------\n";
+	oboji.setDefault();
 	this->dodajIzvjestaj(izvjestaj);
 	this->updateLoyalitiBodovi(korisnik, cijenaUsluge / 100);
 	return 1;

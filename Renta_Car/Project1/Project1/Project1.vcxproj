@@ -135,6 +135,7 @@
     <ClInclude Include="Korisnik.h" />
     <ClInclude Include="Lista.h" />
     <ClInclude Include="Marka.h" />
+    <ClInclude Include="menu_section.h" />
     <ClInclude Include="RentaCar.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

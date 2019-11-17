@@ -39,7 +39,7 @@ void Korisnik::setKorisnik()
 		oboji.setCrvena();
 		cout << "-------------------------------\n";
 		oboji.setDefault();
-		kartica.kreirajKarticu();
+		kartica.kreirajKarticu(this->getImePrezime(), this->getEmail());
 	}
 }
 
@@ -51,16 +51,18 @@ void Korisnik::setLoyalitiBodovi(double Bodovi)
 void Korisnik::dodajIznajmjenoAuto(Auto & a)
 {
 	this->jeIznajmio.dodaj(a);
+
 }
 
 void Korisnik::vratiIznajmjenoAuto()
 {
 	this->jeIznajmio.obrisi();
+
 }
 
-string Korisnik::getImeIznajmljenogAuta()
+Auto Korisnik::getObjekatIznajmljenoAuto()
 {
-	return this->jeIznajmio.getClan().getMarka().getNaziv();
+	return jeIznajmio.getClan();
 }
 
 string Korisnik::getImePrezime()

@@ -5,6 +5,7 @@
 #include"Auto.h"
 #include"Lista.h"
 class Korisnik{
+private:
 	string imePrezime;
 	Datum datumRodenja;
 	string email;
@@ -25,7 +26,7 @@ public:
 	void setLoyalitiBodovi(double Bodovi);
 	void dodajIznajmjenoAuto(Auto &a);
 	void vratiIznajmjenoAuto();
-	string getImeIznajmljenogAuta();
+	Auto getObjekatIznajmljenoAuto();
 	string getImePrezime();
 	string getEmail();
 	Datum getDatumRodjenja();
