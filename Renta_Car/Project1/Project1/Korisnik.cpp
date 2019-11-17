@@ -53,6 +53,16 @@ void Korisnik::dodajIznajmjenoAuto(Auto & a)
 	this->jeIznajmio.dodaj(a);
 }
 
+void Korisnik::vratiIznajmjenoAuto()
+{
+	this->jeIznajmio.obrisi();
+}
+
+string Korisnik::getImeIznajmljenogAuta()
+{
+	return this->jeIznajmio.getClan().getMarka().getNaziv();
+}
+
 string Korisnik::getImePrezime()
 {
 	return this->imePrezime;
@@ -76,4 +86,34 @@ ClanskaKartica Korisnik::getKartica()
 double Korisnik::getLoyalitiBodivi()
 {
 	return this->loyalitiBodovi;
+}
+
+void Korisnik::printKorisnikInfo()
+{
+	boja oboji;
+	oboji.setCrvena();
+	cout << "-----------------------------\n";
+	oboji.setDefault();
+	cout << "Broj clanske kartice: "<< this->kartica.getBrojKartice() << endl;
+	cout << "Datum kreiranja kartice: "; this->kartica.getDatumKreiranjaKartice().ispisiDatum();
+	cout << endl;
+	oboji.setCrvena();
+	cout << "---------------------------------------------------\n";
+	oboji.setDefault();
+	cout << "Ime prezime: " << this->getImePrezime() << endl;
+	cout << "Datum rodjednja: "; this->datumRodenja.ispisiDatum();
+	cout << endl;
+	cout << "Email: " << this->getEmail() << endl;
+	oboji.setCrvena();
+	cout << "---------------------------------------------------\n";
+	oboji.setDefault();
+	cout << "Broj loyaliti bodova: "; oboji.setZelena(); cout << this->getLoyalitiBodivi() << endl; oboji.setDefault();
+	oboji.setCrvena();
+	cout << "-----------------------------\n";
+	oboji.setDefault();
+}
+
+int Korisnik::getBrojIznamljenihAuta()
+{
+	return this->jeIznajmio.getDuzina();
 }

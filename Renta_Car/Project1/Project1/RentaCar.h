@@ -22,13 +22,19 @@ public:
 
 	void dodajKorisnika(Korisnik &k);
 	int getBrojKorisnika();
+	void printIdsAndImenaKorisnika();
+	void printAllKorisnikInfo(Korisnik * korisnik);
+	void printKorisniciKojiSuIznajmiliAutomobil();
+	Korisnik *getKorisnikNaUnosClanskeKarte(int &unos);
+	bool provjeriUsloveZaIznamjljivanjeAuta(Korisnik &korisnik);
+	void vratiIznamljeniAutomobil(Korisnik &korisnik);
 	void dodajAuto(Auto &a);
 	void ispisiVozniPark();
 	int getSizeOfListaAuta();
 	int getUkupanBrojDostupnihAuta();
 
 	void dodajIzvjestaj(string &izvjestaj);
-	void izvrsiRezervaciju(Korisnik &korisnik,int &izbor);
+	int izvrsiRezervaciju(Korisnik &korisnik,int &izbor);
 
 	void setBrojDanaZaKoristenjeAuta();
 	int getBrojKoristenihDana();
