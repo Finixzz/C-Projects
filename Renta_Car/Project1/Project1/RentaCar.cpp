@@ -176,7 +176,7 @@ int RentaCar::izvrsiRezervaciju(Korisnik &korisnik,int & izborAuta)
 	izborAuta--;
 	if (izborAuta < 0)
 		return -1;
-	while (izborAuta >= this->getSizeOfListaAuta()) {
+	while (izborAuta >= this->getSizeOfListaAuta() || listaAuta.getClanSaIndexa(izborAuta).getBrojAutaTogTipa()==0) {
 		oboji.setCrvena(); cout << "[POGRESAN UNOS]" << endl; oboji.setDefault();
 		cout << "Unesite redni broj automobila za iznajmljivanje: ";
 		cin >> izborAuta;

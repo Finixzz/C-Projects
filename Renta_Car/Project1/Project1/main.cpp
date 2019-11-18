@@ -8,20 +8,23 @@
 int main() {
 
 
-	RentaCar rent;
+	RentaCar *rent = new RentaCar();
 	int izbor;
+
 LOOP:do {
 		izbor = menu();
 
-		if (izbor == 7)
+		if (izbor == 7) {
+			delete rent; rent = nullptr;
 			break;
+		}
 
 		else
 
 		if (izbor == 0) {
 			Auto *a = new Auto;
 			a->setAuto();
-			rent.dodajAuto(*a);
+			rent->dodajAuto(*a);
 			system("pause"); system("cls");
 		}
 
@@ -31,8 +34,8 @@ LOOP:do {
 			Korisnik *n=new Korisnik;
 			n->setKorisnik();
 			system("pause"); system("cls");
-				sideAction(rent,*n);
-			rent.dodajKorisnika(*n);
+				sideAction(*rent,*n);
+			rent->dodajKorisnika(*n);
 			system("pause"); system("cls");
 
 
@@ -41,7 +44,7 @@ LOOP:do {
 		else
 
 		if (izbor == 2) {
-			if (rent.getUkupanBrojDostupnihAuta() == 0) {
+			if (rent->getUkupanBrojDostupnihAuta() == 0) {
 				oboji.setCrvena();
 				cout << "---------------------------------\n";
 				cout << " Trenutno nema aktivnih vozila!" << endl;
@@ -52,7 +55,7 @@ LOOP:do {
 				oboji.setZelena();
 				cout << "------------------------------------------------------\n";
 				oboji.setDefault();
-				cout << "Trenutno se na stanju nalazi ukupno " << rent.getUkupanBrojDostupnihAuta() << " automobila" << endl;
+				cout << "Trenutno se na stanju nalazi ukupno " << rent->getUkupanBrojDostupnihAuta() << " automobila" << endl;
 				oboji.setZelena();
 				cout << "------------------------------------------------------\n";
 				oboji.setDefault();
@@ -63,7 +66,7 @@ LOOP:do {
 		else
 
 		if (izbor == 3) {
-			if (rent.getBrojIzvjestaja() == 0) {
+			if (rent->getBrojIzvjestaja() == 0) {
 				oboji.setCrvena();
 				cout << "---------------------------------\n";
 				cout << "Trenutno nema aktivnih izvjestaja\n";
@@ -71,7 +74,7 @@ LOOP:do {
 				oboji.setDefault();
 			}
 			else {
-				rent.printIzvjestaji();
+				rent->printIzvjestaji();
 			}
 			system("pause"); system("cls");
 		}
@@ -79,7 +82,7 @@ LOOP:do {
 		else
 
 		if (izbor == 4) {
-			if (rent.getBrojKorisnika() == 0) {
+			if (rent->getBrojKorisnika() == 0) {
 				oboji.setCrvena();
 				cout << "-------------------------------------\n";
 				cout << "Trenutno nema registrovanih korisnika\n";
@@ -87,17 +90,17 @@ LOOP:do {
 				oboji.setDefault();
 			}
 			else {
-				rent.printIdsAndImenaKorisnika();
+				rent->printIdsAndImenaKorisnika();
 				int unos;
 				cout << "Za ispish svih informacija unesite broj clanske karte: "; cin >> unos;
-				while (!rent.getKorisnikNaUnosClanskeKarte(unos)) {
+				while (!rent->getKorisnikNaUnosClanskeKarte(unos)) {
 					oboji.setCrvena();
 					cout << "[POGRESAN UNOS!]" << endl;
 					oboji.setDefault();
 					cout << "Unesite broj clanske kartice: "; cin >> unos;
 				}
-				Korisnik *korisnik = rent.getKorisnikNaUnosClanskeKarte(unos);
-				rent.printAllKorisnikInfo(korisnik);
+				Korisnik *korisnik = rent->getKorisnikNaUnosClanskeKarte(unos);
+				rent->printAllKorisnikInfo(korisnik);
 			}
 			system("pause"); system("cls");
 		}
@@ -105,7 +108,7 @@ LOOP:do {
 		else
 
 		if (izbor == 5) {
-			if (rent.getBrojKorisnika() == 0) {
+			if (rent->getBrojKorisnika() == 0) {
 				oboji.setCrvena();
 				cout << "-------------------------------------\n";
 				cout << "Trenutno nema registrovanih korisnika\n";
@@ -113,17 +116,17 @@ LOOP:do {
 				oboji.setDefault();
 			}
 			else {
-				rent.printIdsAndImenaKorisnika();
+				rent->printIdsAndImenaKorisnika();
 				int unos;
 				cout << "Unesite broj clanske karte za iznajmljivanje: "; cin >> unos;
-				while (!rent.getKorisnikNaUnosClanskeKarte(unos)) {
+				while (!rent->getKorisnikNaUnosClanskeKarte(unos)) {
 					oboji.setCrvena();
 					cout << "[POGRESAN UNOS!]" << endl;
 					oboji.setDefault();
 					cout << "Unesite broj clanske kartice: "; cin >> unos;
 				}
-				Korisnik &korisnik = *rent.getKorisnikNaUnosClanskeKarte(unos);
-				if (rent.getUkupanBrojDostupnihAuta() == 0) {
+				Korisnik &korisnik = *rent->getKorisnikNaUnosClanskeKarte(unos);
+				if (rent->getUkupanBrojDostupnihAuta() == 0) {
 					oboji.setCrvena();
 					cout << "---------------------------------\n";
 					cout << " Trenutno nema aktivnih vozila!" << endl;
@@ -132,7 +135,7 @@ LOOP:do {
 				}
 				else {
 					int izborAuta;
-					rent.ispisiVozniPark();
+					rent->ispisiVozniPark();
 					oboji.setCrvena();
 					cout << "[Unesite 0 ako vam ne pase izbor automobila]" << endl;
 					oboji.setDefault();
@@ -145,7 +148,7 @@ LOOP:do {
 					
 					else
 
-					if (!rent.izvrsiRezervaciju(korisnik, izborAuta)) {
+					if (!rent->izvrsiRezervaciju(korisnik, izborAuta)) {
 						oboji.setCrvena();
 						cout << "------------------------------------------------------\n";
 						oboji.setDefault();
@@ -163,7 +166,7 @@ LOOP:do {
 
 		if (izbor == 6) {
 			
-			if (rent.getBrojKorisnika() == 0) {
+			if (rent->getBrojKorisnika() == 0) {
 				oboji.setCrvena();
 				cout << "-------------------------------------\n";
 				cout << "Trenutno nema registrovanih korisnika\n";
@@ -172,17 +175,17 @@ LOOP:do {
 			}
 			else {
 				try {
-					rent.printKorisniciKojiSuIznajmiliAutomobil();
+					rent->printKorisniciKojiSuIznajmiliAutomobil();
 					int unos;
 					cout << "Unesite broj clanske karte za iznajmljivanje: "; cin >> unos;
-					while (!rent.getKorisnikNaUnosClanskeKarte(unos)) {
+					while (!rent->getKorisnikNaUnosClanskeKarte(unos)) {
 						oboji.setCrvena();
 						cout << "[POGRESAN UNOS!]" << endl;
 						oboji.setDefault();
 						cout << "Unesite broj clanske kartice: "; cin >> unos;
 					}
-					Korisnik &korisnik = *rent.getKorisnikNaUnosClanskeKarte(unos);
-					rent.vratiIznamljeniAutomobil(korisnik);
+					Korisnik &korisnik = *rent->getKorisnikNaUnosClanskeKarte(unos);
+					rent->vratiIznamljeniAutomobil(korisnik);
 				}
 				catch (...) {
 					cout << " Niti jedan korisnik nije zaduzio automobil\n";
@@ -195,6 +198,7 @@ LOOP:do {
 			system("pause"); system("cls");
 		}
 	} while (1);
+
 
 	system("Pause");
 	return 0;
