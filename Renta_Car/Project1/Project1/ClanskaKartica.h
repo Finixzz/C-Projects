@@ -11,7 +11,7 @@ public:
 		datumKreiranjaKartice{}, postojiKartica{ false }, brojKartice{ 0 }{};
 	~ClanskaKartica(){}
 	
-	void kreirajKarticu(string imePrezime,string email);
+	void kreirajKarticu(string &,string &);
 	bool getStatusKartice();
 	Datum getDatumKreiranjaKartice();
 	int getBrojKartice();

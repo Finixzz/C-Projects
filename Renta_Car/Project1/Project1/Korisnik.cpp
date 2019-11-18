@@ -39,7 +39,7 @@ void Korisnik::setKorisnik()
 		oboji.setCrvena();
 		cout << "-------------------------------\n";
 		oboji.setDefault();
-		kartica.kreirajKarticu(this->getImePrezime(), this->getEmail());
+		kartica.kreirajKarticu(imePrezime, email);
 	}
 }
 

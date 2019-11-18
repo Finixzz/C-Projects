@@ -13,7 +13,7 @@ int main() {
 LOOP:do {
 		izbor = menu();
 
-		if (izbor < 0)
+		if (izbor == 7)
 			break;
 
 		else

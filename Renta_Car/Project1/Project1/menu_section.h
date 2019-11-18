@@ -31,6 +31,7 @@ int menu() {
 		cout << "4) Ispisi registrovane korisnike\n";
 		cout << "5) Iznajmi automobil\n";
 		cout << "6) Vrati iznajmljeni automobil\n";
+		cout << "7) KRAJ\n";
 		oboji.setZelena();
 		cout << "-------------------------------------------\n";
 		oboji.setDefault();

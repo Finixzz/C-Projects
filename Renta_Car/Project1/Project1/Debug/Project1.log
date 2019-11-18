@@ -1,5 +1,4 @@
-﻿  ClanskaKartica.cpp
-  Korisnik.cpp
+﻿  main.cpp
 c:\users\450g6\source\repos\c-projects\renta_car\project1\project1\lista.h(158): warning C4101: 'oboji': unreferenced local variable
   c:\users\450g6\source\repos\c-projects\renta_car\project1\project1\lista.h(157): note: while compiling class template member function 'T &Lista<T>::getClanSaIndexa(int &)'
           with
@@ -7,26 +6,4 @@ c:\users\450g6\source\repos\c-projects\renta_car\project1\project1\lista.h(158):
               T=Auto
           ]
   c:\users\450g6\source\repos\c-projects\renta_car\project1\project1\korisnik.h(13): note: see reference to class template instantiation 'Lista<Auto>' being compiled
-  RentaCar.cpp
-c:\users\450g6\source\repos\c-projects\renta_car\project1\project1\lista.h(158): warning C4101: 'oboji': unreferenced local variable
-  c:\users\450g6\source\repos\c-projects\renta_car\project1\project1\lista.h(157): note: while compiling class template member function 'T &Lista<T>::getClanSaIndexa(int &)'
-          with
-          [
-              T=Auto
-          ]
-  c:\users\450g6\source\repos\c-projects\renta_car\project1\project1\rentacar.cpp(84): note: see reference to function template instantiation 'T &Lista<T>::getClanSaIndexa(int &)' being compiled
-          with
-          [
-              T=Auto
-          ]
-  c:\users\450g6\source\repos\c-projects\renta_car\project1\project1\korisnik.h(13): note: see reference to class template instantiation 'Lista<Auto>' being compiled
-  main.cpp
-c:\users\450g6\source\repos\c-projects\renta_car\project1\project1\lista.h(158): warning C4101: 'oboji': unreferenced local variable
-  c:\users\450g6\source\repos\c-projects\renta_car\project1\project1\lista.h(157): note: while compiling class template member function 'T &Lista<T>::getClanSaIndexa(int &)'
-          with
-          [
-              T=Auto
-          ]
-  c:\users\450g6\source\repos\c-projects\renta_car\project1\project1\korisnik.h(13): note: see reference to class template instantiation 'Lista<Auto>' being compiled
-  Generating Code...
   Project1.vcxproj -> C:\Users\450G6\source\repos\C-Projects\Renta_Car\Project1\Debug\Project1.exe
