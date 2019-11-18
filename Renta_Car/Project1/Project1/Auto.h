@@ -16,6 +16,7 @@ public:
 		godinaProizvodnje{ 2000 }, brojBrzina{ 6 },
 		brojAuta{ 0 },cijenaPoDanu{ 0 }{}
 	~Auto() {};
+
 	void setMarka();
 	void setBrojTakvihAuta();
 	void jeIznajmljeno();
@@ -27,6 +28,8 @@ public:
 	void setBrojBrzina();
 	void setCijenaPoDanu();
 	void setAuto();
+	void printAutoInfo();
+
 	Marka getMarka();
 	string getTip();
 	string getGorivo();
@@ -34,5 +37,4 @@ public:
 	int getBrojBrzina();
 	int getBrojAutaTogTipa();
 	double getCijenaPoDanu();
-	void printAutoInfo();
 };

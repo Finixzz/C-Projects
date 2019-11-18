@@ -13,6 +13,7 @@ public:
 	
 	void kreirajKarticu(string &,string &);
 	bool getStatusKartice();
+
 	Datum getDatumKreiranjaKartice();
 	int getBrojKartice();
 };

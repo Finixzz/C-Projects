@@ -99,9 +99,9 @@ void RentaCar::vratiIznamljeniAutomobil(Korisnik & korisnik)
 }
 
 
-void RentaCar::dodajAuto(Auto &a)
+void RentaCar::dodajAuto(Auto &automobil)
 {
-	this->listaAuta.dodaj(a);
+	this->listaAuta.dodaj(automobil);
 }
 
 void RentaCar::dodajIzvjestaj(string &izvjestaj) {

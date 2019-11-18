@@ -26,13 +26,13 @@ public:
 	void setLoyalitiBodovi(double Bodovi);
 	void dodajIznajmjenoAuto(Auto &a);
 	void vratiIznajmjenoAuto();
+	void printKorisnikInfo();
+
 	Auto getObjekatIznajmljenoAuto();
 	string getImePrezime();
 	string getEmail();
 	Datum getDatumRodjenja();
 	ClanskaKartica getKartica();
 	double getLoyalitiBodivi();
-
-	void printKorisnikInfo();
 	int getBrojIznamljenihAuta();
 };

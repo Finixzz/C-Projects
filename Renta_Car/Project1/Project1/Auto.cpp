@@ -123,9 +123,14 @@ void Auto::printAutoInfo() {
 		this->datumRegistracije.ispisiDatum();
 		cout << " i ima ukupno " << this->getBrojBrzina() << " brzina, ";
 		if (this->getBrojAutaTogTipa() != 0) {
+			oboji.setCrvena();
 			cout << "na stanju trenutno dostupno " << this->getBrojAutaTogTipa() << " takvih Auta" << endl;
+			oboji.setDefault();
 		}
-		else
+		else {
+			oboji.setCrvena();
 			cout << " na stanju trenutno nema niti jedno slobodno!" << endl;
+			oboji.setDefault();
+		}
 		cout << "	Cijena po danu: " << this->getCijenaPoDanu(); cout<< " [KM]" << endl;
 }

@@ -7,8 +7,10 @@ public:
 	Marka() :
 		naziv{ "empty" }, zemljaPorijekla{ "empty" }{};
 	~Marka(){};
+
 	void setNaziv();
 	void setZemljaPorijekla();
+
 	string getNaziv();
 	string  getZemljaPorijekla();
 };

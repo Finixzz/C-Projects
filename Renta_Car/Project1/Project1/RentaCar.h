@@ -21,27 +21,24 @@ public:
 	~RentaCar() {};
 
 	void dodajKorisnika(Korisnik &k);
-	int getBrojKorisnika();
 	void printIdsAndImenaKorisnika();
-	void printAllKorisnikInfo(Korisnik * korisnik);
+	void printAllKorisnikInfo(Korisnik *);
 	void printKorisniciKojiSuIznajmiliAutomobil();
-	Korisnik *getKorisnikNaUnosClanskeKarte(int &unos);
-	bool provjeriUsloveZaIznamjljivanjeAuta(Korisnik &korisnik);
-	void vratiIznamljeniAutomobil(Korisnik &korisnik);
-	void dodajAuto(Auto &a);
+	bool provjeriUsloveZaIznamjljivanjeAuta(Korisnik &);
+	void vratiIznamljeniAutomobil(Korisnik &);
+	void dodajAuto(Auto &);
 	void ispisiVozniPark();
+	void dodajIzvjestaj(string &);
+	void setBrojDanaZaKoristenjeAuta();
+	void updateLoyalitiBodovi(Korisnik &, double);
+	void printIzvjestaji();
+
+	int getBrojKorisnika();
 	int getSizeOfListaAuta();
 	int getUkupanBrojDostupnihAuta();
-
-	void dodajIzvjestaj(string &izvjestaj);
-	int izvrsiRezervaciju(Korisnik &korisnik,int &izbor);
-
-	void setBrojDanaZaKoristenjeAuta();
+	Korisnik *getKorisnikNaUnosClanskeKarte(int &);
+	int izvrsiRezervaciju(Korisnik &,int &);
 	int getBrojKoristenihDana();
-
-	void updateLoyalitiBodovi(Korisnik &korisnik,double Bodovi);
-
 	int getBrojIzvjestaja();
-	void printIzvjestaji();
 };
 
