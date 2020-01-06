@@ -115,10 +115,16 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Igrac.cpp" />
+    <ClCompile Include="Klub.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Utakmica.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Igrac.h" />
     <ClInclude Include="includes.h" />
+    <ClInclude Include="Klub.h" />
+    <ClInclude Include="Utakmica.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

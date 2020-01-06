@@ -18,9 +18,27 @@
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Igrac.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Klub.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Utakmica.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="includes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Igrac.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Klub.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Utakmica.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
